@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Carte du développement de l'enfant</title>
-<meta name="description" content="Carte mentale interactive : le développement de l'enfant dans les textes officiels, les ressources Éduscol et les maquettes de formation, pour le CRPE.">
+<meta name="description" content="Carte mentale interactive : le développement de l'enfant aux cycles 1, 2 et 3, dans les textes officiels, les ressources Éduscol et les maquettes de formation, pour le CRPE.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -147,7 +147,7 @@ blockquote cite { display: block; font-style: normal; font-family: var(--f-mono)
 
 <header class="tete wrap">
   <h1>Le développement de l'enfant, du texte officiel aux théories</h1>
-  <p>Pour le CRPE. Chaque nœud indique d'où vient l'information : texte réglementaire, ressource Éduscol, maquette de formation ou repère de manuel. Les citations sont recopiées des documents, avec la page du PDF.</p>
+  <p>Pour le CRPE, cycles 1, 2 et 3. Chaque nœud indique d'où vient l'information : texte réglementaire, ressource Éduscol, maquette de formation ou repère de manuel. Les citations sont recopiées des documents, avec la page du PDF.</p>
 </header>
 
 <div class="outils">
@@ -204,14 +204,25 @@ const S = {
   projet: { l: "Éduscol, La démarche de projet (physique-chimie, septembre 2020)", u: "https://eduscol.education.fr/document/15940/download" },
   lille: { l: "INSPÉ Lille Hauts-de-France, guide des enseignements, master MEEF 1er degré, M1 2024-2025", u: "https://www.inspe-lille-hdf.fr/fileinspe/user_upload/Documents/Ressources_formateurs_etudiants/M1_MEEF_1er_degre/GE_1D_M1_24-25.pdf" },
   uparis: { l: "Université Paris Cité, licence (S6), cours « Psychologie de l'éducation et de la formation »", u: "https://odf.u-paris.fr/plugins/odf-web/uparis/_content/course-psychologie-de-l-education-et-de-la-formation/Psychologie%20de%20l'%C3%A9ducation%20et%20de%20la%20formation.pdf" },
+  c2: { l: "Programme du cycle 2, volet 1 « Les spécificités du cycle » (programme de 2015 consolidé, BO n° 31 du 30 juillet 2020), toujours en vigueur", u: "https://cache.media.education.gouv.fr/file/31/88/5/ensel714_annexe1_1312885.pdf" },
+  c3: { l: "Programme du cycle 3, volet 1 « Les spécificités du cycle de consolidation » (version consolidée, BO n° 31/2020 et n° 25/2023), toujours en vigueur", u: "https://eduscol.education.gouv.fr/media/100806/download?attachment" },
+  epsC2: { l: "Programme d'EPS du cycle 2 (BO n° 22 du 28 mai 2026)", u: "https://www.education.gouv.fr/sites/default/files/document/annexe-1-programme-d-education-physique-et-sportive-cycle-2-516770.pdf" },
+  epsC3: { l: "Programme d'EPS du cycle 3 (BO n° 22 du 28 mai 2026)", u: "https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-d-education-physique-et-sportive-cycle-3-516773.pdf" },
+  emc: { l: "Programme d'enseignement moral et civique, du CP à la terminale (BO n° 24 du 13 juin 2024)", u: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20d%E2%80%99enseignement%20moral%20et%20civique%20du%20cours%20pr%C3%A9paratoire%20%C3%A0%20la%20classe%20terminale%20des%20voies%20g%C3%A9n%C3%A9rale%2C%20technologique%20et%20professionnelle%20et%20des%20classes%20pr%C3%A9parant%20au%20CAP-402159.pdf" },
+  emcLivret: { l: "Éduscol, Enseignement moral et civique, livret d'accompagnement de programme (2025), CP", u: "https://eduscol.education.gouv.fr/sites/default/files/document/2025livretaccompagnementemccp-111693.pdf" },
+  evar: { l: "Programme d'éducation à la vie affective et relationnelle, école élémentaire (BO n° 6 du 6 février 2025)", u: "https://www.education.gouv.fr/sites/default/files/document/Programme%20d%E2%80%99%C3%A9ducation%20%C3%A0%20la%20vie%20affective%20et%20relationnelle%20%C3%A0%20l%E2%80%99%C3%A9cole%20%C3%A9l%C3%A9mentaire-405261.pdf" },
+  sciC3: { l: "Programme de sciences et technologie du cycle 3 (BO n° 24 du 11 juin 2026)", u: "https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf" },
+  guideCP: { l: "Éduscol, Pour enseigner la lecture et l'écriture au CP, un guide fondé sur l'état de la recherche (2019)", u: "https://eduscol.education.gouv.fr/sites/default/files/document/guide-pour-enseigner-la-lecture-et-l-ecriture-au-cp-67854.pdf" },
+  ecritC3: { l: "Éduscol, Les guides fondamentaux pour enseigner : l'écriture au cycle 3 (2026)", u: "https://eduscol.education.gouv.fr/sites/default/files/document/men-guide-ecriture-cycle-3-130201.pdf" },
+  reunion: { l: "ESPE de La Réunion, contenus d'enseignement du master MEEF 1er degré (2014)", u: "https://inspe.univ-reunion.fr/fileadmin/Fichiers/ESPE/formations/MEEF_1er_degre/maquettes/contenus_d_enseignement_9_mai.pdf" },
   cvl: { l: "INSPÉ Centre-Val de Loire, groupe disciplinaire de psychologie, « Pour préparer sa rentrée » (2025)", u: "https://www.univ-orleans.fr/upload/public/2025-05/Pour%20pr%C3%A9parer%20sa%20rentr%C3%A9e-Document%20ressources%20cr%C3%A9%C3%A9%20par%20le%20GD%20Psychologie%20INSPE%20CVL.pdf" }
 };
 
 // q : citations [texte, clé source, page, niveau de la bordure]
-// echo : [citation du programme 2026, page]
+// echo : [citation du programme du cycle 1, page] ; echos : [[citation, cycle, clé source, page]] pour les cycles 2 et 3
 const ARBRE = {
   id: "racine", t: "Le développement de l'enfant", n: "nav",
-  corps: "<p>La carte part du cadre officiel, qui demande de connaître la psychologie de l'enfant sans nommer d'auteurs, puis passe aux théories que les ressources Éduscol et les formations citent explicitement.</p><p>Pour chaque théorie, l'encadré <strong>Écho dans le programme</strong> rapproche la théorie d'une phrase du programme de maternelle 2026. Ce rapprochement est proposé pour construire un argumentaire à l'oral. Le programme lui-même ne cite aucun auteur.</p>",
+  corps: "<p>La carte part du cadre officiel, qui demande de connaître la psychologie de l'enfant sans nommer d'auteurs, puis passe aux théories que les ressources Éduscol et les formations citent explicitement.</p><p>Pour chaque théorie, l'encadré <strong>Écho dans les programmes</strong> rapproche la théorie d'une phrase du programme du cycle 1, et quand c'est possible des cycles 2 et 3. Ce rapprochement est proposé pour construire un argumentaire à l'oral. Les programmes eux-mêmes ne citent aucun auteur.</p><p>Attention au déséquilibre entre cycles : la maternelle parle beaucoup du développement, l'élémentaire beaucoup moins. La branche <strong>Cycles 2 et 3</strong> rassemble ce que disent leurs textes.</p>",
   e: [
   { id: "cadre", t: "Le cadre officiel", n: "nav",
     corps: "<p>Ces textes expliquent pourquoi le développement de l'enfant est au concours. Aucun ne cite de théoricien : ils demandent des connaissances « fondamentales » et « scientifiques » sans choisir d'école.</p>",
@@ -244,12 +255,13 @@ const ARBRE = {
           ["Plusieurs auteurs tels Bruner, Piaget, Vygotski, Lautrey, Vergnaud, Wallon (entre autres) formeront la base théorique du cours.", "uparis", 1, "form"]],
       s: ["lille", "uparis", "cvl"] },
     { id: "constat", t: "Ce que les textes officiels ne disent pas", n: "nav",
-      corps: "<p>Aucun texte réglementaire consulté (référentiel, arrêtés, programme) ne nomme un théoricien. Les noms apparaissent dans les ressources Éduscol et dans les maquettes de formation.</p><p>À l'oral, on peut donc dire : « le programme demande de tenir compte du développement de l'enfant ; les ressources d'accompagnement s'appuient sur Piaget, Vygotski, Bruner… ». En revanche, il ne faut pas dire « le programme cite Piaget ».</p>" }
+      corps: "<p>Aucun texte réglementaire consulté (référentiel, arrêtés, programmes des cycles 1, 2 et 3) ne nomme un théoricien. Les noms apparaissent dans les ressources Éduscol et dans les maquettes de formation.</p><p>À l'oral, on peut donc dire : « le programme demande de tenir compte du développement de l'enfant ; les ressources d'accompagnement s'appuient sur Piaget, Vygotski, Bruner… ». En revanche, il ne faut pas dire « le programme cite Piaget ».</p>" }
   ]},
 
   { id: "piaget", t: "Piaget : le constructivisme", n: "nav", d: "Jean Piaget (1896-1980)",
     corps: "<p>Dans les ressources Éduscol, Piaget est surtout cité pour sa classification des jeux et pour le jeu symbolique.</p>",
     echo: ["Pour susciter la réflexion des élèves, les professeurs proposent des problèmes à leur portée. […] Les élèves sont accompagnés dans leurs tâtonnements et leurs essais de réponse.", 4],
+    echos: [["[…] les enfants en âge d'être scolarisés en classe de CP sont encore fortement centrés sur eux-mêmes.", "Cycle 2 (CP)", "emcLivret", 4]],
     e: [
     { id: "pia-jeux", t: "Les quatre sortes de jeux", n: "edu",
       q: [["Jean PIAGET distingue quatre sortes de jeux : les jeux d'exercices (au début du stade sensori-moteur entre 0 et 2 ans) ; les jeux symboliques (2 à 7 ans) ; les jeux à règles (à partir de 4 ans) ; les jeux de construction.", "jregles", 4],
@@ -268,6 +280,9 @@ const ARBRE = {
       s: ["jconstr"] },
     { id: "pia-stades", t: "Les stades du développement intellectuel", n: "acad",
       corps: "<ul><li><strong>Sensori-moteur</strong> (0-2 ans) : l'intelligence passe par l'action et la perception, jusqu'à la permanence de l'objet.</li><li><strong>Préopératoire</strong> (2-7 ans) : apparition de la fonction symbolique (langage, jeu symbolique, imitation différée), pensée égocentrique, pas encore de conservation.</li><li><strong>Opérations concrètes</strong> (7-11/12 ans) : réversibilité, conservation, classification et sériation, sur du concret.</li><li><strong>Opérations formelles</strong> (à partir de 11/12 ans) : raisonnement hypothético-déductif.</li></ul><p>Les âges sont indicatifs. L'ordre des stades est invariant, mais l'âge auquel on les atteint varie.</p>" },
+    { id: "pia-moral", t: "Le jugement moral", n: "form",
+      corps: "<p>Dans les contenus d'enseignement du master MEEF de l'ESPE de La Réunion (2014), le module lié à l'enseignement moral et civique cite Piaget, <em>L'éducation morale à l'école</em> (Economica, 1997).</p><p><em>Repère académique</em> : dans <em>Le jugement moral chez l'enfant</em> (1932), Piaget décrit le passage d'une morale de l'<strong>hétéronomie</strong> (la règle vient de l'adulte, elle est sacrée) à une morale de l'<strong>autonomie</strong> (la règle naît de la coopération entre pairs et peut être discutée), vers 7-8 ans puis 10-12 ans.</p>",
+      s: ["reunion"] },
     { id: "pia-meca", t: "Assimilation, accommodation, équilibration", n: "acad",
       corps: "<p>L'enfant construit ses connaissances en agissant. Il <strong>assimile</strong> le nouveau à ses schèmes existants, <strong>accommode</strong> ses schèmes quand le réel résiste, et l'<strong>équilibration</strong> règle ces deux mouvements. Le développement va de l'individu vers le social.</p><p>Éduscol utilise ce vocabulaire à propos du jeu symbolique : il aide l'enfant « à se libérer des contraintes de l'accommodation au réel » (jeux symboliques, p. 7).</p>",
       s: ["jsymb"] }
@@ -275,6 +290,7 @@ const ARBRE = {
 
   { id: "vygotski", t: "Vygotski : le socioconstructivisme", n: "nav", d: "Lev Vygotski (1896-1934)",
     echo: ["Une place importante est donnée à l'observation et à l'imitation des autres élèves et des adultes. Les professeurs favorisent les interactions et créent les conditions d'une attention partagée et d'une prise en compte du point de vue de l'autre.", 4],
+    echos: [["La classe s'organise donc autour de reprises constantes des connaissances en cours d'acquisition et d'une différenciation des apprentissages.", "Cycle 2", "c2", 2]],
     e: [
     { id: "vy-zpd", t: "La zone proximale de développement", n: "edu",
       q: [["La « zone proximale de développement » est un espace cognitif située entre deux autres zones appelées la « zone d'autonomie » et la « zone de rupture » (zone où même s'il reçoit de l'aide, l'élève aura des difficultés à accomplir la tâche). Conceptualisé par Lev Vygotski.", "vadeGS", 27]],
@@ -292,6 +308,7 @@ const ARBRE = {
 
   { id: "bruner", t: "Bruner : l'étayage", n: "nav", d: "Jerome Bruner (1915-2016)",
     echo: ["Ils les aident à se représenter ce qu'ils vont devoir faire, avec quels outils et selon quels procédés. Ils partagent les critères de réussite […]", 5],
+    echos: [["L'enseignement doit être structuré, progressif et explicite.", "Cycle 3", "c3", 3]],
     e: [
     { id: "br-conj", t: "Attention conjointe, coaction, rites", n: "edu",
       q: [["J.S. Bruner (1975) a décrit très clairement ces procédures conventionnelles, ces types particuliers de tâches où s'engage la relation de communication adulte-enfant. Ces procédures restent utiles à l'entrée en petite section.", "lang", 5]],
@@ -308,6 +325,7 @@ const ARBRE = {
 
   { id: "wallon", t: "Wallon : émotion et corps", n: "nav", d: "Henri Wallon (1879-1962)",
     echo: ["[…] la place essentielle du langage, l'importance du corps dans le développement cognitif, moteur, sensoriel et affectif de l'enfant […]", 3],
+    echos: [["L'éducation physique et sportive (EPS) à l'école élémentaire contribue au développement moteur, sensoriel, affectif, cognitif et relationnel des élèves. […] en considérant l'élève dans l'unité de ses dimensions corporelle, cognitive, sociale et affective.", "Cycles 2 et 3", "epsC2", 2]],
     e: [
     { id: "wa-jeu", t: "Cité par Éduscol pour le jeu", n: "edu",
       q: [["H. Wallon, J. Chateau et S. Smilansky évoquent des « jeux faisant appel à des mouvements simples et répétés, avec ou sans objets », pour le plaisir du jeu lui-même et de sa réussite ; ils exercent les fonctions sensori-motrices de l'enfant […]", "jexplo", 4]],
@@ -322,6 +340,7 @@ const ARBRE = {
 
   { id: "affectif", t: "Affectivité et attachement", n: "nav", d: "Freud, Winnicott, Bowlby",
     echo: ["L'expérience de la séparation entre l'enfant et sa famille requiert l'attention de toute la communauté éducative, particulièrement lors de la première année de scolarisation.", 3],
+    echos: [["[…] l'élève évolue dans un climat d'apprentissage dans lequel il se sent en sécurité physique, psychologique et sociale […]", "Cycle 2 (EPS)", "epsC2", 10]],
     e: [
     { id: "bowlby", t: "Bowlby : l'attachement", n: "edu", d: "John Bowlby (1907-1990)",
       q: [["L'attachement, selon Bowlby (1969), correspond à la façon dont l'enfant recherche et maintient la proximité de sa mère pour se sentir en sécurité. On distingue ainsi les enfants sécurisés des enfants insécurisés.", "m3projet", 8]],
@@ -344,6 +363,7 @@ const ARBRE = {
 
   { id: "jeu", t: "Le jeu comme objet d'étude", n: "nav", d: "Château, Caillois, Brougère, Smilansky",
     echo: ["Le jeu revêt diverses formes : symbolique, d'exploration, de construction et de manipulation, d'imitation, collectif et de société, fabriqué et inventé, etc. Les professeurs donnent à chacun un temps suffisant pour déployer son activité de jeu.", 4],
+    echos: [["[…] l'élève gère de manière positive ses émotions liées à la victoire ou à la défaite […]", "Cycle 3 (EPS, jeux collectifs)", "epsC3", 6]],
     e: [
     { id: "jeu-liste", t: "Les auteurs retenus par Éduscol", n: "edu",
       q: [["J. Piaget, H. Wallon, D. Winnicott, J. Château, R. Caillois, G. Brougère … de très nombreux chercheurs ont traité du jeu selon des points de vue variés […] Tous ont mis en évidence son caractère fondamental dans le développement de l'enfant.", "jeu", 4]],
@@ -386,6 +406,47 @@ const ARBRE = {
       corps: "<p>Je n'ai trouvé l'approche de Reggio Emilia ni dans les textes officiels, ni dans les ressources Éduscol, ni dans les maquettes INSPÉ consultées. Elle apparaît dans des formations étrangères (Bolzano, par exemple) et dans des travaux de recherche.</p><p>Si ta maquette INSPÉ l'aborde, tu peux l'ajouter avec cette source. Sinon, mieux vaut ne pas la présenter au jury comme une référence institutionnelle.</p>" }
   ]},
 
+  { id: "cycles23", t: "Cycles 2 et 3", n: "nav", d: "CP – 6e, de 6 à 11 ans environ",
+    corps: "<p>Les programmes de l'élémentaire parlent moins du développement que celui de la maternelle. Ils le font surtout à travers le rythme et la diversité des élèves, l'EPS, l'EMC, l'éducation à la vie affective et relationnelle, et la puberté en sciences.</p><p>Les ressources Éduscol de l'élémentaire ne citent plus les théoriciens du XXe siècle. Elles s'appuient sur la psychologie cognitive et les neurosciences actuelles.</p>",
+    e: [
+    { id: "c2-volet", t: "Cycle 2 : grandir ne suffit pas", n: "off", d: "Volet 1 du programme du cycle 2",
+      q: [["Apprendre à l'école, c'est interroger le monde. C'est aussi acquérir des langages spécifiques, acquisitions pour lesquelles le simple fait de grandir ne suffit pas.", "c2", 2, "off"],
+          ["Les enfants qui arrivent au cycle 2 sont très différents entre eux. Ils ont grandi et ont appris dans des contextes familiaux et scolaires divers qui influencent fortement les apprentissages et leur rythme.", "c2", 2, "off"],
+          ["[…] l'automatisation de certains savoir-faire est le moyen de libérer des ressources cognitives pour qu'ils puissent accéder à des opérations plus élaborées et à la compréhension.", "c2", 2, "off"]],
+      corps: "<p>Le volet 1 du cycle 2 reste en vigueur en 2026-2027 : les arrêtés récents n'ont remplacé que les parties disciplinaires.</p>",
+      s: ["c2"] },
+    { id: "c2-emotions", t: "Cycle 2 : émotions et sentiments", n: "off",
+      q: [["L'expression de leurs sentiments et de leurs émotions, leur régulation, la confrontation de leurs perceptions à celles des autres s'appuient également sur l'ensemble des activités artistiques, sur l'enseignement du français et de l'éducation physique et sportive.", "c2", 6, "off"]],
+      s: ["c2"] },
+    { id: "c3-volet", t: "Cycle 3 : consolider et passer au collège", n: "off", d: "Volet 1 du programme du cycle 3",
+      q: [["Les modalités d'apprentissages doivent être différenciées selon le rythme d'acquisition des élèves afin de favoriser leur réussite.", "c3", 3, "off"],
+          ["La classe de 6e occupe une place particulière dans le cycle : elle permet aux élèves de s'adapter au rythme, à l'organisation pédagogique et au cadre de vie du collège […]", "c3", 3, "off"]],
+      s: ["c3"] },
+    { id: "eps23", t: "EPS : un développement global", n: "off", d: "Programmes 2026, cycles 2 et 3",
+      q: [["L'éducation physique et sportive (EPS) à l'école élémentaire contribue au développement moteur, sensoriel, affectif, cognitif et relationnel des élèves.", "epsC2", 2, "off"],
+          ["[…] l'élève évolue dans un climat d'apprentissage dans lequel il se sent en sécurité physique, psychologique et sociale […]", "epsC2", 10, "off"]],
+      corps: "<p>La même phrase d'ouverture figure dans le programme du cycle 3 (p. 2). C'est le lien direct avec l'épreuve orale du CRPE, qui évalue l'EPS et le développement de l'enfant ensemble.</p>",
+      s: ["epsC2", "epsC3"] },
+    { id: "emc23", t: "EMC : empathie et compétences psychosociales", n: "off",
+      q: [["Le programme d'enseignement moral et civique participe pleinement au développement des compétences psychosociales des élèves, qu'elles soient cognitives, émotionnelles ou sociales.", "emc", 5, "off"]],
+      corps: "<p>Le programme donne une progression de l'empathie par classe (p. 6). Au CP, « comprendre ses émotions et ses sentiments ». Au CE1, « développer sa capacité d'empathie ». Au CM1, « comprendre ce qu'implique et permet l'empathie ».</p><p>Le livret d'accompagnement du CP (Éduscol, 2025, p. 4) justifie ce départ par l'âge : les élèves de CP sont « encore fortement centrés sur eux-mêmes ». On peut rapprocher cette remarque de l'égocentrisme décrit par Piaget, mais le livret ne le cite pas.</p>",
+      s: ["emc", "emcLivret"] },
+    { id: "evar23", t: "EVAR : le développement de l'enfant", n: "off", d: "Programme de 2025, école élémentaire",
+      q: [["Dans le premier degré (école maternelle et élémentaire), elle prend la forme d'une éducation à la vie affective et relationnelle axée sur le développement de l'enfant et des relations sociales.", "evar", 3, "off"],
+          ["[…] l'éducation à la sexualité permet l'apprentissage du respect de l'intimité corporelle et psychique des élèves, en tenant compte de leur rythme de croissance et de développement […]", "evar", 2, "off"]],
+      s: ["evar"] },
+    { id: "puberte", t: "Cycle 3 : la puberté et le cerveau", n: "off", d: "Sciences et technologie, programme de 2026",
+      q: [["L'objectif est de permettre aux élèves de cycle 3 de comprendre, sur le plan biologique, les changements pubertaires chez les êtres humains et leur lien avec la capacité à se reproduire.", "sciC3", 14, "off"]],
+      corps: "<p>Au CM1, les élèves étudient les changements du corps à la puberté à partir de courbes de croissance. Au CM2, ils étudient les organes reproducteurs et les menstruations. Le même programme fait étudier le cerveau au CM1 (perception, mouvement, langage, mémoire, émotions) avec un objectif : identifier « des stratégies favorisant l'attention et la mémorisation » (p. 14).</p><p>Le cycle 3 est donc le moment où l'école aborde l'entrée dans l'adolescence.</p>",
+      s: ["sciC3"] },
+    { id: "cogn", t: "Éduscol : la psychologie cognitive prend le relais", n: "edu",
+      q: [["L'étape charnière de la lecture, c'est le décodage des graphèmes en phonèmes, c'est le passage d'une unité visuelle à une unité auditive.", "guideCP", 21]],
+      corps: "<p>Ce sont les mots de Stanislas Dehaene, cité dans le guide du CP. Le guide de l'écriture au cycle 3 (2026) s'appuie, lui, sur Michel Fayol et sur des travaux d'Olivier Houdé et Grégoire Borst sur le contrôle inhibiteur.</p><p>Le guide du CP critique aussi la « méthode globale » (p. 35), sans nommer Decroly. À l'oral, on peut la situer historiquement (voir le nœud Decroly), mais il faut savoir que les textes actuels la rejettent.</p><p>Ces auteurs sont du XXIe siècle : ils sortent du cadre « grandes théories des XIXe et XXe siècles », mais ce sont eux que l'institution cite pour l'élémentaire.</p>",
+      s: ["guideCP", "ecritC3"] },
+    { id: "ages", t: "Repères d'âge par cycle", n: "acad",
+      corps: "<p>Correspondances habituelles des manuels, approximatives par nature :</p><ul><li><strong>Cycle 1</strong> (3-6 ans) : Piaget, stade préopératoire (fonction symbolique, égocentrisme) ; Wallon, stade du personnalisme ; Freud, stade phallique (complexe d’Œdipe).</li><li><strong>Cycle 2</strong> (6-8 ans) : Piaget, entrée dans les opérations concrètes vers 7 ans ; Wallon, stade catégoriel ; Freud, période de latence.</li><li><strong>Cycle 3</strong> (9-11 ans) : Piaget, opérations concrètes, puis premiers raisonnements formels vers 11-12 ans ; Wallon, fin du stade catégoriel et approche de la puberté ; Freud, fin de la latence.</li></ul><p>À manier avec prudence : ces théories décrivent des tendances, pas des seuils. Les programmes insistent au contraire sur la diversité des rythmes.</p>" }
+  ]},
+
   { id: "actuel", t: "Le vocabulaire actuel du programme", n: "nav",
     corps: "<p>Le programme de 2026 parle le langage de la psychologie cognitive. Ces notions prolongent les théories du XXe siècle.</p>",
     e: [
@@ -403,7 +464,7 @@ const ARBRE = {
   ]},
 
   { id: "absents", t: "Cherchés, non trouvés", n: "abs",
-    corps: "<p>Ces noms n'apparaissent dans aucun des documents officiels, Éduscol ou INSPÉ consultés pour cette carte : <strong>Reggio Emilia / Malaguzzi, Pauline Kergomard, René Spitz, Erik Erikson, Arnold Gesell</strong>.</p><p>Ce n'est pas un jugement sur leur intérêt. Simplement, aucune source de cette carte ne permet de les rattacher au cadre institutionnel. Vérifie dans ta propre maquette avant de les citer comme attendus.</p>" }
+    corps: "<p>Ces noms n'apparaissent dans aucun des documents officiels, Éduscol ou INSPÉ consultés pour cette carte : <strong>Reggio Emilia / Malaguzzi, Pauline Kergomard, René Spitz, Erik Erikson, Arnold Gesell, Lawrence Kohlberg, Jean Le Boulch</strong>. Kohlberg (développement moral) et Le Boulch (psychomotricité) ont été cherchés en plus pour les cycles 2 et 3.</p><p>Ce n'est pas un jugement sur leur intérêt. Simplement, aucune source de cette carte ne permet de les rattacher au cadre institutionnel. Vérifie dans ta propre maquette avant de les citer comme attendus.</p>" }
   ]
 };
 
@@ -426,6 +487,7 @@ function texteNoeud(n) {
   const parts = [n.t, n.d || "", n.corps || ""];
   (n.q || []).forEach(q => parts.push(q[0]));
   if (n.echo) parts.push(n.echo[0]);
+  (n.echos || []).forEach(e => parts.push(e[0]));
   return parts.join(" ").replace(/<[^>]+>/g, " ").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 }
 function norm(s) { return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().trim(); }
@@ -540,17 +602,22 @@ function rendreFiche() {
     h += `<h3>Ce que dit la source</h3>`;
     n.q.forEach(([txt, k, p, nv]) => {
       const src = S[k];
-      const bord = nv || (k === "lille" || k === "uparis" || k === "cvl" ? "form" : "");
+      const bord = nv || (k === "lille" || k === "uparis" || k === "cvl" || k === "reunion" ? "form" : "");
       h += `<blockquote class="${bord}"><p>« ${echap(txt)} »</p><cite>${echap(src.l)}${p ? `, p. ${p}` : ""}</cite></blockquote>`;
     });
   }
-  if (n.echo) {
-    h += `<h3>Écho dans le programme</h3><div class="echo"><p>« ${echap(n.echo[0])} »</p><p class="note">Programme du cycle 1 (2026), préambule, p. ${n.echo[1]}. Ce rapprochement est proposé pour l'oral : le programme ne cite pas d'auteur.</p></div>`;
+  if (n.echo || n.echos) {
+    h += `<h3>Écho dans les programmes</h3>`;
+    if (n.echo) h += `<div class="echo"><p>« ${echap(n.echo[0])} »</p><p class="note">Cycle 1 : programme de 2026, préambule, p. ${n.echo[1]}.</p></div>`;
+    (n.echos || []).forEach(([txt, cyc, k, p]) => {
+      h += `<div class="echo"><p>« ${echap(txt)} »</p><p class="note">${echap(cyc)} : ${echap(S[k].l)}, p. ${p}.</p></div>`;
+    });
+    h += `<p class="dates">Rapprochement proposé pour l'oral : les programmes ne citent pas d'auteur.</p>`;
   }
   if (n.e && n.e.length) {
     h += `<h3>Sous-thèmes</h3><div class="enfants">${n.e.map(c => `<button type="button" data-id="${c.id}"><span class="pt" style="display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;background:var(${NIVEAUX[c.n].c})"></span>${echap(c.t)}</button>`).join("")}</div>`;
   }
-  const cles = [...new Set([...(n.s || []), ...(n.q || []).map(q => q[1])])];
+  const cles = [...new Set([...(n.s || []), ...(n.q || []).map(q => q[1]), ...(n.echos || []).map(e => e[2])])];
   if (cles.length) {
     h += `<h3>Sources</h3><ul class="srcs">${cles.map(k => `<li><a href="${S[k].u}" target="_blank" rel="noopener">${echap(S[k].l)}</a></li>`).join("")}</ul>`;
   } else if (n.n === "acad") {
